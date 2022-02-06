@@ -132,3 +132,12 @@ dmypy.json
 
 # csv and txt
 data/
+output/
+
+#docker files
+docker/.local/
+docker/.jupyter/
+docker/.ipython/
+docker/.cache/
+.jupyter/
+.local/
