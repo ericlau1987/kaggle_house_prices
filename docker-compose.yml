@@ -7,7 +7,7 @@ services:
     ports:
      - 8888:8888
     volumes:
-      - ../:/home/jovyan
+      - .:/home/jovyan
   postgres_house_prices:
     container_name: postgres_house_prices
     build: ./docker/postgres
