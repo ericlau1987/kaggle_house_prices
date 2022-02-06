@@ -1,0 +1,27 @@
+version: '3'
+services:
+  jupyter_house_price:
+    container_name: jupyter_house_prices
+    build: ./docker/jupyter
+    image: jupyter:house_prices
+    ports:
+     - 8888:8888
+    volumes:
+      - .:/home/jovyan
+  postgres_house_prices:
+    container_name: postgres_house_prices
+    build: ./docker/postgres
+    image: postgres:house_prices
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    user: postgres
+    environment:
+      # - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_DB=kaggle_house_price
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    # ports:
+    #     - "5432:5432"
+
+volumes:
+  postgres_data:

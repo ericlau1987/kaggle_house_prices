@@ -131,12 +131,16 @@ dmypy.json
 .DS_Store
 
 # csv and txt
-.csv 
-.txt
+data/
 
-# 
+#docker files
+docker/.local/
+docker/.jupyter/
+docker/.ipython/
+docker/.cache/
 .jupyter/
 .local/
+
+# vs code
 .vscode/
-docker/
-output/
+
