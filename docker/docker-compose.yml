@@ -1,13 +1,17 @@
 version: '3'
 services:
   this_jupyter:
-    build: jupyter:house_prices
+    container_name: jupyter_house_prices
+    build: ./jupyter
+    image: jupyter:house_prices
     ports:
      - 8888:8888
     volumes:
       - .:/home/jovyan
   this_postgres:
-    build: postgres:house_prices
+    container_name: postgres_house_prices
+    build: ./postgres
+    image: postgres:house_prices
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
