@@ -141,3 +141,6 @@ docker/.ipython/
 docker/.cache/
 .jupyter/
 .local/
+
+# vs code
+.vscode/
