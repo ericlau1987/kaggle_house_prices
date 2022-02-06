@@ -1,0 +1,19 @@
+version: '3'
+services:
+  this_jupyter:
+    build: jupyter
+    tag: house_prices
+    ports:
+     - 8888:8888
+    volumes:
+      - .:/home/jovyan
+  this_postgres:
+    build: postgres
+    tag: house_prices
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+
+volumes:
+  postgres_data:
